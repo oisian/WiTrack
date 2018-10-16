@@ -18,9 +18,9 @@ class CreateBeaconRecordsTable extends Migration
 			$table->string('reportedFrom');
 			$table->string('mac');
 			$table->string('type');
-			$table->string('timestamp');
-            $table->string('signalStrength');
-			$table->string('frequency');
+			$table->integer('timestamp');
+            $table->decimal('signalStrength');
+			$table->integer('frequency');
 			$table->string('shortName')->nullable();
 
             $table->timestamps();

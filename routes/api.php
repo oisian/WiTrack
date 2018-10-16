@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::group(array('prefix' => 'v1', 'middleware' => []), function () {
+
+    Route::group(['prefix' => 'track'], function () {
+        Route::middleware('auth:api')->get('getdevices', 'KisParseController@get_devices');
+    });
+
+});

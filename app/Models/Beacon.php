@@ -16,7 +16,8 @@ class Beacon extends Model
 		'id',
 		'mac',
 		'host',
-
+        'lastRead',
+        'active'
     ];
 
     public static $rules = [

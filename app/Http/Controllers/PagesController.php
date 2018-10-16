@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -26,5 +27,12 @@ class PagesController extends Controller
     public function dashboard()
     {
         return view('dashboard');
+    }
+
+    public function track()
+    {
+
+        return view('dashboard.track');
+
     }
 }

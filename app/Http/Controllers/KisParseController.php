@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\BeaconRecord;
 use Illuminate\Http\Request;
 use App\Models\Beacon;
+use Illuminate\Support\Facades\DB;
 
 class KisParseController extends Controller
 {
@@ -110,5 +111,20 @@ class KisParseController extends Controller
     {
 
         $this->get_kismet_records_from_timestamp($this->hosts);
+    }
+
+
+    public function get_devices()
+    {
+        $records = DB::table('beacon_records')
+            ->select('id', 'reportedFrom', 'mac', 'type', 'signalStrength', 'frequency', 'timestamp')
+            ->where('type' ,'=', 'Wi-Fi Client')
+            ->where('timestamp' ,'>', (time()-300))
+            ->groupBy('mac', 'reportedFrom')
+            ->orderBy('signalStrength', 'DESC')
+            ->get();
+
+
+        return $records;
     }
 }

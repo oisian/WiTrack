@@ -85,6 +85,7 @@ Route::group(['middleware' => ['auth', 'active']], function () {
     */
 
     Route::get('/dashboard', 'PagesController@dashboard');
+    Route::get('/track', 'PagesController@track');
 
     /*
     |--------------------------------------------------------------------------

@@ -8,7 +8,7 @@
         <title>App</title>
 
         <link rel="icon" type="image/ico" href="">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Local -->
         <link rel="stylesheet" type="text/css" href="/css/raw.min.css">
         <link rel="stylesheet" type="text/css" href="/css/app.css">
@@ -27,7 +27,7 @@
         @include('partials.message')
 
         <div class="container-fluid">
-            <div  id='' class="row">
+            <div  id='app' class="row">
                 @yield("app-content")
             </div>
         </div>
