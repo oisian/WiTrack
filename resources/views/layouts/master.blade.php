@@ -14,8 +14,14 @@
         <link rel="stylesheet" type="text/css" href="/css/app.css">
         <link rel="stylesheet" type="text/css" href="/css/Login-Form-Dark.css">
         <link rel="stylesheet" type="text/css" href="/css/animatedText.css">
+
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" ></script>
         <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+
+
+        <!-- Required Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
 
         @yield('stylesheets')
     </head>
